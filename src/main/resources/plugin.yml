@@ -1,0 +1,27 @@
+name: PrefixShop
+version: "1.0"
+author: onebone
+api: [1.0.0]
+main: me.onebone.prefixshop.PrefixShop
+depend: [EconomyAPI, ChatFormatter]
+
+commands:
+  prefix:
+    description: Allows player to set their prefix
+    permission: prefixshop.command.prefix
+permissions:
+  prefixshop:
+    description: Includes all permissions of PrefixShop
+    children:
+      prefixshop.buy:
+        description: Allows player to buy prefix
+        default: true
+      prefixshop.create:
+        description: Allows player to create prefix shop
+      prefixshop.remove:
+        description: Allows player to remove prefix shop
+      prefixshop.command:
+        description: Allows player to use command
+        children:
+          prefixshop.command.prefix:
+            description: Allows player to use /prefix
